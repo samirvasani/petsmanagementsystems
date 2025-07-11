@@ -1,0 +1,10 @@
+com\example\petmanagement\service\UserServiceTest$CreateUserTests.class
+com\example\petmanagement\repository\PetRepositoryTest.class
+com\example\petmanagement\service\UserServiceTest$UpdateUserTests.class
+com\example\petmanagement\service\UserServiceTest$MarkUserAsDeceasedTests.class
+com\example\petmanagement\service\UserServiceTest.class
+com\example\petmanagement\controller\PetControllerIntegrationTest.class
+com\example\petmanagement\controller\UserControllerIntegrationTest.class
+com\example\petmanagement\repository\UserRepositoryTest.class
+com\example\petmanagement\service\UserServiceTest$RemovePetTests.class
+com\example\petmanagement\service\PetServiceTest.class
