@@ -9,8 +9,9 @@ A Spring Boot 3 application to manage users and their pets, built with Java 21, 
 - [Technology Choices](#technology-choices)
 - [Challenges and Solutions](#challenges-and-solutions)
 - [Setup Instructions](#setup-instructions)
-- [Running Tests](#running-tests)
+- [Future Enhancement](#future-enhancement)
 - [Swagger Documentation](#swagger-documentation)
+- [H2 Database](#h2-database)
 
 ## Overview
 This application manages users and their pets, with support for:
@@ -78,29 +79,26 @@ The entity-relationship model includes:
     - **Solution**: Excluded security auto-configurations in tests using `@TestPropertySource` with `spring.autoconfigure.exclude`.
 5. **Challenge**: Tests passed in IDE but failed in Maven build.
     - **Solution**: Used `@DirtiesContext` to reset the application context and ensured consistent H2 configuration (`create-drop` mode).
-6. **If further time will be given then below enhancements can be included**
+
+## Future Enhancement
    - **Add spring security feature for authentication and authorization to endpoints.Example: User can be created,Update by user with Admin rights**
    - **More validation scenarios can be added at each layers**
+   - **Entity relationship diagrams,UML,sequence diagrams,class diagrams**
    - **Efficient queries**
    - **Conflict resolution.Meaning only one user can perform edit,delete pet,user.**
      - *This can be implemented by adding locking level strategies at column levels*
    - **To achieve scalability i.e. efficiency in bulk data retrival,persistence,removal**
      - *Can be achieve by implementing proper indexing,partitioning ,add pagination at UserService as well *
-   - **We can think of adding deathDate of Pet and User.**
-   - **We can add more domain specific exception.**
+   - **Domain-Specific exception.**
      - *Example: For DAO/Repo level we can throw <ClassName>DAOException. *
      - *Example: For Service level we can throw <ClassName>ServiceException. *
-   - **More concise swagger documentation by adding more details about each and each attribute of method,class**
-   - **We can include changes for cloud deployment on AKS or Azure webapp**
-   - **Can leverage AI to automatically detect endpoints rather then manually calling it. Need to do POC on this but looks possible**
+   - **Improved swagger** documentation by adding more details about each and each attribute of method,class
+   - **Cloud deployment** We can include changes for cloud deployment on AKS or Azure webapp.
+   - **AI-Driven Endpoint Detection:** Explore AI-based tools to automatically detect and document endpoints,requires further research.
 
-## Setup Instructions
-1. **Prerequisites**:
-    - Java 21
-    - Maven 3.9.x
-    - Git
 
-2. **Clone the Repository**:
-   ```bash
-   git clone <repository-url>
-   cd pet-management
+## Swagger Documentation:
+    - Once system is up swagger can be found here http://localhost:8080/swagger-ui/index.html#/
+
+## H2 Database
+    - http://localhost:8080/h2-console
