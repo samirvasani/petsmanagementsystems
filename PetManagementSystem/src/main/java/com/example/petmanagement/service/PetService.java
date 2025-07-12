@@ -179,20 +179,10 @@ public class PetService {
     /**
      * Find active pet by petid
      *
-     * @param id petid to find the active pet
+     * @param petid to find the active pet
      * @return Pet found result
      * @throws ResourceNotFoundException if no Pet found
      */
-//    @Transactional(readOnly = true)
-//    public Pet getPetById(Long id) {
-//        LOGGER.info("Retrieve pet infor for the given petid {}", id);
-//
-//        return petRepository.findById(id)
-//                .filter(u -> !u.isDeceased())
-//                .orElseThrow(() -> new ResourceNotFoundException(
-//                        "Active pet not found with id: " + id +
-//                                " (either doesn't exist or is deceased)"));
-//    }
     @Transactional(readOnly = true)
     public Pet findActivePetWithOwners(Long petId, boolean activePetRequired) {
         LOGGER.info("Retrieve  pets along with address underneath for petId {} based on the active or inactive pets requirements", petId);
