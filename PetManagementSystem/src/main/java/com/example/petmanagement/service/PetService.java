@@ -179,7 +179,7 @@ public class PetService {
     /**
      * Find active pet by petid
      *
-     * @param petid to find the active pet
+     * @param petId to find the active pet
      * @return Pet found result
      * @throws ResourceNotFoundException if no Pet found
      */
